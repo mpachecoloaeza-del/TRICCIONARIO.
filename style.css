@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #d9b382;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.contenedor {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 90px;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+h1 {
+  color: #5c2b00;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.tarjeta {
+  background-color: #e6c499;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 320px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #4b2a00;
+  margin-top: 10px;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  border: 2px solid #b88b5d;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+  background-color: #f3dbb7;
+  color: #4b2a00;
+  resize: none;
+  box-sizing: border-box;
+}
+
+/* === BOTONES === */
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.btn-pegar {
+  background-color: #2e6b2e !important;
+}
+.btn-pegar:hover {
+  background-color: #245524 !important;
+}
+
+.naranja {
+  background-color: #b86a19;
+}
+.naranja:hover {
+  background-color: #944e0e;
+}
+
+.nota {
+  text-align: center;
+  font-size: 12px;
+  color: #5c2b00;
+  margin-top: 15px;
+}
+
+/* --- DECORACIÓN --- */
+
+.decoracion-serpiente img {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.bordado-superior,
+.bordado-inferior {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  max-height: 90px;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bordado-superior { top: 0; }
+.bordado-inferior { bottom: 0; }
+
+.barra-superior {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 50;
+}
+
+.icono {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.menu { position: relative; }
+
+.menu-desplegable {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  background-color: #fff5e0;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.menu-desplegable a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #4b2a00;
+  font-weight: 600;
+}
+.menu-desplegable a:hover {
+  background-color: #f2d9b3;
+}
+
+/* --- SECCIONES --- */
+.seccion {
+  display: none;
+  padding: 20px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  text-align: center;
+  color: #4b2a00;
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease;
+}
+.seccion.visible {
+  display: block;
+}
+
+.titulo-seccion {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #5c2b00;
+}
+
+.seccion p {
+  white-space: pre-line;
+  line-height: 1.6;
+  font-size: 17px;
+  text-align: left;
+  margin: 10px 0;
+}
+
+/* --- TEXTO AVISO (sonero) --- */
+.sonero {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 0.80rem;      /* más pequeño */
+  color: #5a3e1b;
+}
+
+.sonero br {
+  margin: 0;
+  padding: 0;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#notaDiccionario {
+  text-align: center;
+  font-size: 14px;
+  margin-top: -10px; /* Opcional, para pegarlo al texto de arriba */
+  display: block;
+  width: 100%;
+}
